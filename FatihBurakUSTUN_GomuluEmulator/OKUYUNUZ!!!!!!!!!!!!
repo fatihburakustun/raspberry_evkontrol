@@ -1,0 +1,64 @@
+Fatih Burak ÜSTÜN
+
+EV KONTROL SİSTEMİNİ ÇALIŞTIRMAK VE NE YAPTIĞINI ANLAMANIZ AÇISINDAN LÜTFEN OKUYUNUZ.
+
+NASIL AÇILIR?
+
+1) Öncelikle "run.py" dosyasını açıyoruz. Daha sonra "RUN" tuşuna basmadan önce,
+"evkontrol.py" ve "EmulatorGUI.py" dosyasını da açıyoruz.
+
+2) Daha sonra "run.py" dosyasını "RUN" ile çalıştırıyoruz. Çalıştırdıktan sonra,
+ 
+"Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat"
+
+yazılı bir yer geliyor. Buradan "http://127.0.0.1:5000/" kısmına tıklıyoruz ve web browserımız açılıyor.
+
+3)Ana Sayfa'dan "Evi Görüntülemek İçin Tıklayınız.." yazısına tıklıyoruz. Daha sonra ise açmış olduğumuz "evkontrol.py" 'yi "RUN" tuşu ile çalıştırıyoruz. Böylelikle Emulatorumuz ekrana geliyor. (Emulator gelmezse önce "STOP" tuşuna ardından tekrardan "RUN" tuşuna basınız.)
+
+
+----------------------------------------------------------------------------------------
+
+PEKİ NASIL ÇALIŞIYOR?
+
+
+GPIO14,GPIO15,GPIO18 Input Değerlerimize bastığımız zaman;
+GPIO4,GPIO9,GPIO17 Output Değerlerimizde etkileniyor. Şöyle ki:
+
+
+AÇMAK İÇİN;
+
+INPUT ->  GPIO14 = KASA'YI AÇAR VE Değerini aktif olan "1" yapar. Bunu Emulatorumuzden;
+OUTPUT -> GPIO4 = OUTPUT ÇIKTISINI "1" olarak da görebiliriz.
+
+INPUT ->  GPIO15 = EV'I AÇAR VE Değerini aktif olan "1" yapar. Bunu Emulatorumuzden;
+OUTPUT -> GPIO9 = OUTPUT ÇIKTISINI "1" olarak da görebiliriz.
+
+INPUT ->  GPIO18 = ARABA'YI AÇAR VE Değerini aktif olan "1" yapar. Bunu Emulatorumuzden;
+OUTPUT -> GPIO17 = OUTPUT ÇIKTISINI "1" olarak da görebiliriz.
+
+----------------------------------------------------------------------------------------
+
+KAPATMAK İÇİN;
+
+INPUT ->  GPIO8 = KASA'YI KAPATIR VE Değerini aktif olan "0" yapar. Bunu Emulatorumuzden;
+OUTPUT -> GPIO4 = OUTPUT ÇIKTISINI "0" olarak da görebiliriz.
+
+INPUT ->  GPIO16 = EV'I KAPATIR VE Değerini aktif olan "0" yapar. Bunu Emulatorumuzden;
+OUTPUT -> GPIO9 = OUTPUT ÇIKTISINI "0" olarak da görebiliriz.
+
+
+INPUT ->  GPIO25 = ARABA'YI KAPATIR VE Değerini aktif olan "0" yapar. Bunu Emulatorumuzden;
+OUTPUT -> GPIO17 = OUTPUT ÇIKTISINI "0" olarak da görebiliriz.
+
+
+
+
+
+
+
+
+
+
+
+

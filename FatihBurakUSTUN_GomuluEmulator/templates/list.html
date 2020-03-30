@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<meta http-equiv="refresh" content="2"/>
+   
+   <body>
+   <div class="row">
+   <div class="col-lg-4"></div>
+   <div class="col-lg-4"><h3> <center>-Ev Değerleriniz-</center> </h3></div>
+   <div class="col-lg-4"></div></div>
+ <hr>
+ <div class="row"><div class="col-lg-4"></div>
+ <div class="col-lg-4">
+     <center> <table border = 1>
+         <thead>
+            <td height="61px" width="121px"> <center><HR>!! İSİM !! <HR></center></td>
+            <td height="61px" width="121px"> <center><HR>!! DURUM !!<HR> </center></td>  
+            <td height="61px" width="121px"> <center><HR>!! AÇIK MI !!<HR> </center></td>
+      
+         </thead>
+         
+         {% for row in rows %}
+    
+            <tr>
+               <td> <center>{{row["isim"]}} </center></td>
+               <td> <center>{{row["durum"]}} </center></td>
+               <td> <center> {{row["acikmi"]}} </center></td>
+            </tr>
+         {% endfor %}
+      </table></center>
+   
+      <br>
+      <hr>
+    <a href = "/"><center>Giriş Ekranına Geri Dön..</center></a>
+      </div>
+      
+      </div>
+
+
+  
+      
+
+      <hr><hr><hr><br>
+
+      <div>
+      
+
+      
+      <div class="col-lg-4"> 
+      
+       <table border = 3>
+        
+         {% for row in rows %}
+    
+            <tr bgcolor="white">
+               <td height="61px" width="122px"> <center>{{row["isim"]}} </center></td>
+               <td height="61px" width="122px"> <center> {{row["deger"]}} </center></td>
+            </tr>
+         {% endfor %}
+      </table>
+      </div>
+      <div class="col-lg-1">
+      
+            <table border="1">
+<tr>
+</tr>
+  
+      <div class="col-lg-4">
+
+
+
+
+ 
+            
+  
+   </body>
+</html>
+
+    
+         
+
+    
+        
